@@ -1,0 +1,74 @@
+package assignment;
+abstract class plane
+{
+	abstract void takeoff();
+	abstract void fly();
+	abstract void land();
+	
+	
+}
+
+class cargoplane extends plane
+{
+	void takeoff()
+	{
+	System.out.println("Cargoplane is taking off from a long sized away ");	
+	}
+	void fly()
+	{
+		System.out.println("Cargoplane is flying at low heights ");
+	}
+	void land ()
+	{
+		System.out.println("Cargoplane is landing");
+	}
+}
+
+ class passengerplane extends plane
+{
+	void takeoff()
+	{
+		System.out.println("passengerplane is taking off");
+	}
+	void fly()
+	{
+		System.out.println("passengerplane is flying at low heights");
+	}
+	void land()
+	{
+		System.out.println("passengerplane is landing");
+	}
+}
+
+class Airport
+{
+	void permit(plane ref)
+	{
+		ref.takeoff();
+		ref.fly();
+		ref.land();
+	}
+	}
+
+
+public class ExampleOfAbstraction 
+{
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        cargoplane cp = new cargoplane();
+        passengerplane pp = new passengerplane();
+        
+        Airport a = new Airport();
+        a.permit(pp);
+        a.permit(cp);
+	}
+
+}
+output
+passengerplane is taking off
+passengerplane is flying at low heights
+passengerplane is landing
+Cargoplane is taking off from a long sized away 
+Cargoplane is flying at low heights 
+Cargoplane is landing
