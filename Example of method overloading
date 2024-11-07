@@ -1,0 +1,41 @@
+package day16;
+
+class Rectangle
+{
+	int area(int l, int b)
+	{
+		return l*b;
+	}
+	float area(int l, float b)
+	{
+		return l*b;
+	}
+	float area (float l, int b)
+	{
+		return l*b;
+	}
+	int area(int l , int b,  int h)
+	{
+		return 1*b*h;
+	}
+}
+
+
+public class MethodOverloading {
+
+	public static void main(String[] args) {
+		Rectangle R = new Rectangle();
+		int a= 10, b = 20, c = 30;
+		float m = 45.5f, n = 36.7f;
+		System.out.println(R.area(a,b));
+		System.out.println(R.area(m,b));
+		System.out.println(R.area(a,n));
+		System.out.println(R.area(a,b,c));
+	}
+
+}
+output
+200
+910.0
+367.0
+600
