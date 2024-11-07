@@ -1,0 +1,72 @@
+package assignment;
+class os
+{
+	private String name;
+	private int size;
+	
+	os(String name, int size)
+	{
+		this.name = name;
+		this.size = size;
+	}
+ 
+	public String getName() {
+		return name;
+	}
+
+	public int getSize() {
+		return size;
+	}
+}
+
+class charger
+{
+	private String Brand;
+	private int voltage;
+	
+	charger(String brand, int voltahe)
+	{
+		this.Brand = brand;
+		this.voltage = voltage;
+	}
+
+	public String getBrand() {
+		return Brand;
+	}
+
+	public int getVoltage() {
+		return voltage;
+	}
+
+	
+}
+
+class mobile
+{
+	os o =new os("Android",512);
+	void hasA(charger c)
+	{
+
+System.out.println(c.getBrand());
+		System.out.println(c.getVoltage());
+		
+	}
+}
+public class ExampleForAggregationAndComposition {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        charger c = new charger("Nokia",5);
+        mobile m = new mobile();
+        System.out.println(m.o.getName());
+        System.out.println(m.o.getSize());
+        m.hasA(c);
+        
+	}
+
+}
+output
+Android
+512
+Nokia
+0
