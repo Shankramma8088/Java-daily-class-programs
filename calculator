@@ -1,0 +1,70 @@
+package jlab;
+
+import java.util.Scanner;5
+
+class cal
+{
+	int  add(int a, int b)
+	{
+		return a+b;
+	}
+
+	int  add(int a, int b, int c)
+	{
+		return a+b+c;
+	}
+	double add(double k, double l)
+	{
+		return k+l;
+	}
+	  
+}
+
+public class Calculator {
+
+	public static void main(String[] args) {
+		Scanner s = new	Scanner(System.in);
+		cal C = new cal();
+		System.out.println("Enter the value of a :" );
+		int a = s.nextInt();
+		
+		System.out.println("Enter the value of b :");
+		int b = s.nextInt();
+		System.out.println("sum of a+b :" + C.add(a, b));
+		
+		System.out.println("Enter the values c :");
+		int c = s.nextInt();
+		System.out.println("sum of a+b+c :" + C.add(a,b,c));
+		
+		System.out.println("Enter the value of k:");
+		double k = s.nextDouble();
+		System.out.println("Enter the value of l:");
+		double l = s.nextDouble();
+		System.out.println("sum of k+l :" + C.add(k, l));
+		
+		
+		
+		
+		
+		  s.close();
+		}
+		
+		
+		
+	}
+
+
+output
+Enter the value of a :
+5
+Enter the value of b :
+6
+sum of a+b :11
+Enter the values c :
+9
+sum of a+b+c :20
+Enter the value of k:
+8
+Enter the value of l:
+4
+sum of k+l :12.0
